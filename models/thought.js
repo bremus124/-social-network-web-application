@@ -1,3 +1,8 @@
+const { Schema, model, Types } = require('mongoose');
+import moment from 'moment'; window.moment = moment;
+
+const reactionSchema = require('./reaction');
+
 const thoughtSchema = new Schema (
     {
       thoughtText: {
@@ -24,6 +29,11 @@ const thoughtSchema = new Schema (
         },
         id: false,
     }
-)
+);
+thoughtSchema.virtual('reactionCount').get(function () {
+  return this.reactions.length
+});
+const Thought = model('thought', thoughtSchema);
 
-module.exports = thoughtSchema;
+module.exports = Thought;
+
