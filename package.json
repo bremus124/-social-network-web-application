@@ -1,21 +1,23 @@
 {
-    "name": "Challenge-18",
-    "version": "1.0.1",
-    "description": "Mongoose back-end project - Main",
-    "main": "index.js",
-    "license": "MIT",
-    "scripts": {
-      "start": "node index",
-      "dev": "nodemon index",
-      "seed": "node utils/seed",
-      
-    },
-    "dependencies": {
-      "express": "^4.17.1",
-      "mongoose": "^6.0.13"
-    },
-    "devDependencies": {
-      "nodemon": "^2.0.9"
-    }
+  "name": "-social-network-web-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bremus124/-social-network-web-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bremus124/-social-network-web-application/issues"
+  },
+  "homepage": "https://github.com/bremus124/-social-network-web-application#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.5"
   }
-  
+}
