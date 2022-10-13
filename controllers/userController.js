@@ -1,6 +1,4 @@
-const {
-    User, Thought
-} = require('../models');
+const {User, Thought} = require('../models');
 
 const userController = {
     getAllUsers(req, res) {
@@ -18,14 +16,12 @@ const userController = {
           )
           .catch((err) => res.status(500).json(err));
       },
-    createUser(req, res) {
-        User.create(req.body)
-          .then((userData) => res.json(userData))
-          .catch((err) => {
-            console.log(err);
-            return res.status(500).json(err);
-          });
+      createUser({ body }, res) {
+        User.create(body)
+          .then(userData => res.json(userData))
+          .catch(err => res.status(400).json(err));
       },
+
     updateUser(req, res) {
         User.findOneAndUpdate(
           { _id: req.params.id },

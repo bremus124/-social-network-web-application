@@ -1,4 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
+const router = require('express').Router();
 
 const userSchema = new Schema(
   {
