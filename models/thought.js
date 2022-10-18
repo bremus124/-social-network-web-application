@@ -1,8 +1,27 @@
-const { Schema, model, Types } = require('mongoose');
+const { Schema, model, Types, default: mongoose } = require('mongoose');
 // import moment from 'moment';
 const router = require('express').Router();
 
-const reactionSchema = require('./reaction');
+const reactionSchema = new mongoose.Schema({
+    reactionId: {
+     type: Schema.Types.ObjectId,
+     default: () => new Types.ObjectId(),
+    },
+    reactionBody: {
+     type: String,
+     required: true,
+     maxlength: 280
+    },
+    username: {
+     type: String,
+     required: true,
+    },
+    createdAt: {
+     type: Date,
+     default: Date.now,
+     // get: createdAtVal => moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
+    }
+  })
 
 const thoughtSchema = new Schema (
     {

@@ -1,4 +1,0 @@
-// /api/thoughts/:thoughtId/reactions
-
-
-
