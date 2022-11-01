@@ -3,10 +3,10 @@ const { Schema, model, Types, default: mongoose } = require('mongoose');
 const router = require('express').Router();
 
 const reactionSchema = new mongoose.Schema({
-    reactionId: {
-     type: Schema.Types.ObjectId,
-     default: () => new Types.ObjectId(),
-    },
+    // reactionId: {
+    //  type: Schema.Types.ObjectId,
+    //  default: () => new Types.ObjectId(),
+    // },
     reactionBody: {
      type: String,
      required: true,
