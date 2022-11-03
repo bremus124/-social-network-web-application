@@ -42,7 +42,7 @@ const thoughtController = {
           },
         
         deleteThought({params}, res) {
-            Thought.findOneAndDelete({ _id: req.params.id })
+            Thought.findOneAndDelete({ _id:params.id })
               .then(thoughtData => {
                 if (!thoughtData) {
                     res.json(404).json({

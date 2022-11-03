@@ -8,18 +8,8 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
+app.use(routes)
 
-// app.set(require('./routes/api'));
-
-
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/socialDB', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
-
-// // Use this to log mongo queries being executed!
-// mongoose.set('debug', true);
 
 db.once("open", () => {
   app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));

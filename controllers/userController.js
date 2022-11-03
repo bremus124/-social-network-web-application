@@ -37,7 +37,7 @@ const userController = {
       },
     
     deleteUSer({params}, res) {
-        User.findOneAndDelete({ _id: req.params.id })
+        User.findOneAndDelete({ _id:params.id })
           .then(userData => {
             if (!userData) {
                 res.json(404).json({
@@ -51,7 +51,6 @@ const userController = {
     },
 
     addFriend({ params }, res) {
-      console.log('something');
       User.findOneAndUpdate(
         { _id: params.id },
         { $addToSet: { friends: params.friendId } },

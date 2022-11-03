@@ -10,10 +10,10 @@ const {
   deleteReaction,
 } = require('../../controllers/thoughtController');
 
-// /api/users
+// /api/user
 router.route('/').get(getAllThoughts).post(createThought);
 
-// /api/users/:id
+// /api/thought/:id
 router
   .route('/:id')
   .get(getSingleThought)
